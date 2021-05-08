@@ -32,7 +32,7 @@ public class UserController {
         }
     }
 
-    @PostMapping("/")
+    @PostMapping("/register")
     public void add(@RequestBody User user) {
         userService.saveUser(user);
     }
@@ -51,7 +51,10 @@ public class UserController {
 
     @DeleteMapping("/{id}")
     public void delete(@PathVariable Integer id) {
-
         userService.deleteUser(id);
+    }
+
+    public void addToLogin(User user) {
+
     }
 }
